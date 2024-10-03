@@ -21,6 +21,7 @@ export const ItemsList: React.FC<IItemsList> = ({
     if (isEdit && newValue) {
       updateValue(id, newValue);
       setIsEdit(0);
+      setNewValue("");
     }
 
     setIsEdit(isEdit ? 0 : id);
