@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { IItem } from "./Item.types";
 import styles from "./Item.module.css";
 
@@ -8,6 +9,14 @@ export const Item: React.FC<IItem> = ({
   handleEdit,
   removeData,
 }) => {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (!disabled && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [disabled]);
+
   return (
     <li className={styles.item}>
       <input
@@ -16,6 +25,7 @@ export const Item: React.FC<IItem> = ({
         value={value}
         className={styles.item__title}
         onChange={(e) => action(e)}
+        ref={inputRef}
       />
       <div className={styles.news__btns}>
         <button
