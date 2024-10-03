@@ -17,11 +17,19 @@ export const Item: React.FC<IItem> = ({
         className={styles.item__title}
         onChange={(e) => action(e)}
       />
-      <div>
-        <button id="news" className={styles.item__btn} onClick={handleEdit}>
+      <div className={styles.news__btns}>
+        <button
+          id="secondary_btn"
+          className={styles.item__btn}
+          onClick={handleEdit}
+        >
           Изменить
         </button>
-        <button id="news" className={styles.item__btn} onClick={removeData}>
+        <button
+          id="secondary_btn"
+          className={styles.item__btn}
+          onClick={removeData}
+        >
           Удалить
         </button>
       </div>

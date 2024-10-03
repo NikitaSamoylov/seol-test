@@ -25,3 +25,18 @@
 .item:not(:last-child) {
   margin-bottom: 10px;
 }
+
+.news__btns {
+  display: flex;
+  column-gap: 15px;
+}
+
+@media (max-width: 600px) {
+  .item {
+    flex-direction: column;
+  }
+  .item__title {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}

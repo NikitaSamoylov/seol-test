@@ -14,6 +14,11 @@ export const AddItemForm: React.FC<IAddItemProps> = ({ addData }) => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+
+    if (!input) {
+      return;
+    }
+
     addData(input);
     setInput("");
   };
@@ -27,7 +32,9 @@ export const AddItemForm: React.FC<IAddItemProps> = ({ addData }) => {
           value={input}
           onChange={(e) => handleInput(e)}
         />
-        <button className={styles.form__btn}>Добавить</button>
+        <button disabled={input ? false : true} className={styles.form__btn}>
+          Добавить
+        </button>
       </form>
     </div>
   );

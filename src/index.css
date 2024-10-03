@@ -33,9 +33,26 @@ button {
   transition: 0.3s;
 }
 
-#news {
+button:disabled {
+  background-color: rgb(237, 243, 251);
+  color: black;
+  outline: 1px solid rgb(237, 243, 251);
+}
+
+button:hover:disabled {
+  transform: scale(1);
+}
+
+#secondary_btn {
   background-color: #e3c388;
   outline: 1px solid #e3c388;
   color: #56534e;
   font-size: 1.4rem;
+  margin-left: 0;
+}
+
+@media (max-width: 600px) {
+  #secondary_btn {
+    margin-left: 0;
+  }
 }
