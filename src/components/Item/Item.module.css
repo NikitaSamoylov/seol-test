@@ -1,0 +1,27 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(212, 235, 250);
+}
+
+.item__title {
+  font-size: 1.6rem;
+  outline: 1px solid lightcyan;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.item__title:disabled {
+  background-color: transparent;
+  border: none;
+  outline: 1px solid transparent;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}

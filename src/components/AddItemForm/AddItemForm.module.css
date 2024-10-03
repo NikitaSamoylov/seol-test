@@ -1,0 +1,38 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.form__field {
+  padding: 10px 15px;
+  border: none;
+  outline: 1px solid lightskyblue;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+@media (hover: hover) {
+  .form__btn:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 400px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .form__field {
+    margin-bottom: 20px;
+  }
+
+  .form__btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}
